@@ -39,18 +39,15 @@
                 Текст нового поста
               </small>
             </div>
-            {% for field in form %}
-            {{ field.text }}
             <div class="form-group row my-3 p-3">
               <label for="id_group">
                 Группа
               </label>
-              {{ field|addclass:'form-control' }}
+              {{ form.group|addclass:'form-control' }}
               <small id="id_group-help" class="form-text text-muted">
                 Группа, к которой будет относиться пост
               </small>
             </div>
-            {% endfor %}
             <div class="d-flex justify-content-end">
               <button type="submit" class="btn btn-primary">
                 {% if is_edit %}
