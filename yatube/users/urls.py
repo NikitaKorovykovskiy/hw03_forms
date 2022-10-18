@@ -17,8 +17,10 @@ urlpatterns = [
         name='login',
     ),
     path('signup/', views.SignUp.as_view(), name='signup'),
-    path('password_reset/',
-         PasswordResetView.as_view
-         (template_name='users/password_reset_form.html'),
-         name='password_reset_form',),
+    path(
+        'password_reset/',
+        PasswordResetView.as_view
+        (template_name='users/password_reset_form.html'),
+        name='password_reset_form',
+    ),
 ]
